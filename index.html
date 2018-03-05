@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js + boostramp</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	
+	</head>
+	<body>
+		<div id="appVue">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h1>Agregar una tarea</h1>
+					<input type="text" class="form-control" v-model="newKeep">
+				</div>
+				<div class="col-sm-6">
+					<h1>Lista de tareas</h1>
+
+					<ul class="list-group">
+						<li class="list-group-item" 
+							v-for="item in lists">
+							{{ item.keep }}						
+						</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+				<div class="row">
+					<div class="col-xs-12">
+						<pre>
+							{{ $data | Json }} 
+						</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+			<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+				<script src="js/script.js"></script>
+		</body>
+	</html>
